@@ -1,5 +1,5 @@
 /*
- * EBYTE LoRa E32 Series
+ * EBYTE LoRa AS32 Series
  * https://www.mischianti.org/category/my-libraries/lora-e32-devices/
  *
  * The MIT License (MIT)
@@ -29,38 +29,38 @@
  * THE SOFTWARE.
  */
 
-#include "LoRa_E32.h"
+#include "LoRa_AS32.h"
 
 #ifdef ACTIVATE_SOFTWARE_SERIAL
-LoRa_E32::LoRa_E32(byte txE32pin, byte rxE32pin, UART_BPS_RATE bpsRate){
-    this->txE32pin = txE32pin;
-    this->rxE32pin = rxE32pin;
-    SoftwareSerial* mySerial = new SoftwareSerial((uint8_t)this->txE32pin, (uint8_t)this->rxE32pin); // "RX TX" // @suppress("Abstract class cannot be instantiated")
+LoRa_AS32::LoRa_AS32(byte txAS32pin, byte rxAS32pin, UART_BPS_RATE bpsRate){
+    this->txAS32pin = txAS32pin;
+    this->rxAS32pin = rxAS32pin;
+    SoftwareSerial* mySerial = new SoftwareSerial((uint8_t)this->txAS32pin, (uint8_t)this->rxAS32pin); // "RX TX" // @suppress("Abstract class cannot be instantiated")
     this->ss = mySerial;
     this->hs = NULL;
 
     this->bpsRate = bpsRate;
 }
-LoRa_E32::LoRa_E32(byte txE32pin, byte rxE32pin, byte auxPin, UART_BPS_RATE bpsRate){
-    this->txE32pin = txE32pin;
-    this->rxE32pin = rxE32pin;
+LoRa_AS32::LoRa_AS32(byte txAS32pin, byte rxAS32pin, byte auxPin, UART_BPS_RATE bpsRate){
+    this->txAS32pin = txAS32pin;
+    this->rxAS32pin = rxAS32pin;
     this->auxPin = auxPin;
-    SoftwareSerial* mySerial = new SoftwareSerial((uint8_t)this->txE32pin, (uint8_t)this->rxE32pin); // "RX TX" // @suppress("Abstract class cannot be instantiated")
+    SoftwareSerial* mySerial = new SoftwareSerial((uint8_t)this->txAS32pin, (uint8_t)this->rxAS32pin); // "RX TX" // @suppress("Abstract class cannot be instantiated")
     this->ss = mySerial;
     this->hs = NULL;
 
     this->bpsRate = bpsRate;
 }
-LoRa_E32::LoRa_E32(byte txE32pin, byte rxE32pin, byte auxPin, byte m0Pin, byte m1Pin, UART_BPS_RATE bpsRate){
-    this->txE32pin = txE32pin;
-    this->rxE32pin = rxE32pin;
+LoRa_AS32::LoRa_AS32(byte txAS32pin, byte rxAS32pin, byte auxPin, byte m0Pin, byte m1Pin, UART_BPS_RATE bpsRate){
+    this->txAS32pin = txAS32pin;
+    this->rxAS32pin = rxAS32pin;
 
     this->auxPin = auxPin;
 
     this->m0Pin = m0Pin;
     this->m1Pin = m1Pin;
 
-    SoftwareSerial* mySerial = new SoftwareSerial((uint8_t)this->txE32pin, (uint8_t)this->rxE32pin); // "RX TX" // @suppress("Abstract class cannot be instantiated")
+    SoftwareSerial* mySerial = new SoftwareSerial((uint8_t)this->txAS32pin, (uint8_t)this->rxAS32pin); // "RX TX" // @suppress("Abstract class cannot be instantiated")
     this->ss = mySerial;
     this->hs = NULL;
 
@@ -68,9 +68,9 @@ LoRa_E32::LoRa_E32(byte txE32pin, byte rxE32pin, byte auxPin, byte m0Pin, byte m
 }
 #endif
 
-LoRa_E32::LoRa_E32(HardwareSerial* serial, UART_BPS_RATE bpsRate){ //, uint32_t serialConfig
-    this->txE32pin = txE32pin;
-    this->rxE32pin = rxE32pin;
+LoRa_AS32::LoRa_AS32(HardwareSerial* serial, UART_BPS_RATE bpsRate){ //, uint32_t serialConfig
+    this->txAS32pin = txAS32pin;
+    this->rxAS32pin = rxAS32pin;
 
 	#ifdef ACTIVATE_SOFTWARE_SERIAL
     	this->ss = NULL;
@@ -82,9 +82,9 @@ LoRa_E32::LoRa_E32(HardwareSerial* serial, UART_BPS_RATE bpsRate){ //, uint32_t 
 
     this->bpsRate = bpsRate;
 }
-LoRa_E32::LoRa_E32(HardwareSerial* serial, byte auxPin, UART_BPS_RATE bpsRate){ // , uint32_t serialConfig
-    this->txE32pin = txE32pin;
-    this->rxE32pin = rxE32pin;
+LoRa_AS32::LoRa_AS32(HardwareSerial* serial, byte auxPin, UART_BPS_RATE bpsRate){ // , uint32_t serialConfig
+    this->txAS32pin = txAS32pin;
+    this->rxAS32pin = rxAS32pin;
     this->auxPin = auxPin;
 
 	#ifdef ACTIVATE_SOFTWARE_SERIAL
@@ -97,9 +97,9 @@ LoRa_E32::LoRa_E32(HardwareSerial* serial, byte auxPin, UART_BPS_RATE bpsRate){ 
 
     this->bpsRate = bpsRate;
 }
-LoRa_E32::LoRa_E32(HardwareSerial* serial, byte auxPin, byte m0Pin, byte m1Pin, UART_BPS_RATE bpsRate){ //, uint32_t serialConfig
-    this->txE32pin = txE32pin;
-    this->rxE32pin = rxE32pin;
+LoRa_AS32::LoRa_AS32(HardwareSerial* serial, byte auxPin, byte m0Pin, byte m1Pin, UART_BPS_RATE bpsRate){ //, uint32_t serialConfig
+    this->txAS32pin = txAS32pin;
+    this->rxAS32pin = rxAS32pin;
 
     this->auxPin = auxPin;
 
@@ -117,9 +117,9 @@ LoRa_E32::LoRa_E32(HardwareSerial* serial, byte auxPin, byte m0Pin, byte m1Pin, 
 }
 
 #ifdef HARDWARE_SERIAL_SELECTABLE_PIN
-LoRa_E32::LoRa_E32(byte txE32pin, byte rxE32pin, HardwareSerial* serial, UART_BPS_RATE bpsRate, uint32_t serialConfig){
-    this->txE32pin = txE32pin;
-    this->rxE32pin = rxE32pin;
+LoRa_AS32::LoRa_AS32(byte txAS32pin, byte rxAS32pin, HardwareSerial* serial, UART_BPS_RATE bpsRate, uint32_t serialConfig){
+    this->txAS32pin = txAS32pin;
+    this->rxAS32pin = rxAS32pin;
 
 	#ifdef ACTIVATE_SOFTWARE_SERIAL
     	this->ss = NULL;
@@ -131,9 +131,9 @@ LoRa_E32::LoRa_E32(byte txE32pin, byte rxE32pin, HardwareSerial* serial, UART_BP
 
     this->bpsRate = bpsRate;
 }
-LoRa_E32::LoRa_E32(byte txE32pin, byte rxE32pin, HardwareSerial* serial, byte auxPin, UART_BPS_RATE bpsRate, uint32_t serialConfig){
-    this->txE32pin = txE32pin;
-    this->rxE32pin = rxE32pin;
+LoRa_AS32::LoRa_AS32(byte txAS32pin, byte rxAS32pin, HardwareSerial* serial, byte auxPin, UART_BPS_RATE bpsRate, uint32_t serialConfig){
+    this->txAS32pin = txAS32pin;
+    this->rxAS32pin = rxAS32pin;
     this->auxPin = auxPin;
 
 	#ifdef ACTIVATE_SOFTWARE_SERIAL
@@ -146,9 +146,9 @@ LoRa_E32::LoRa_E32(byte txE32pin, byte rxE32pin, HardwareSerial* serial, byte au
 
     this->bpsRate = bpsRate;
 }
-LoRa_E32::LoRa_E32(byte txE32pin, byte rxE32pin, HardwareSerial* serial, byte auxPin, byte m0Pin, byte m1Pin, UART_BPS_RATE bpsRate, uint32_t serialConfig){
-    this->txE32pin = txE32pin;
-    this->rxE32pin = rxE32pin;
+LoRa_AS32::LoRa_AS32(byte txAS32pin, byte rxAS32pin, HardwareSerial* serial, byte auxPin, byte m0Pin, byte m1Pin, UART_BPS_RATE bpsRate, uint32_t serialConfig){
+    this->txAS32pin = txAS32pin;
+    this->rxAS32pin = rxAS32pin;
 
     this->auxPin = auxPin;
 
@@ -169,18 +169,18 @@ LoRa_E32::LoRa_E32(byte txE32pin, byte rxE32pin, HardwareSerial* serial, byte au
 
 #ifdef ACTIVATE_SOFTWARE_SERIAL
 
-LoRa_E32::LoRa_E32(SoftwareSerial* serial, UART_BPS_RATE bpsRate){
-    this->txE32pin = txE32pin;
-    this->rxE32pin = rxE32pin;
+LoRa_AS32::LoRa_AS32(SoftwareSerial* serial, UART_BPS_RATE bpsRate){
+    this->txAS32pin = txAS32pin;
+    this->rxAS32pin = rxAS32pin;
 
     this->ss = serial;
     this->hs = NULL;
 
     this->bpsRate = bpsRate;
 }
-LoRa_E32::LoRa_E32(SoftwareSerial* serial, byte auxPin, UART_BPS_RATE bpsRate){
-    this->txE32pin = txE32pin;
-    this->rxE32pin = rxE32pin;
+LoRa_AS32::LoRa_AS32(SoftwareSerial* serial, byte auxPin, UART_BPS_RATE bpsRate){
+    this->txAS32pin = txAS32pin;
+    this->rxAS32pin = rxAS32pin;
     this->auxPin = auxPin;
 
     this->ss = serial;
@@ -188,9 +188,9 @@ LoRa_E32::LoRa_E32(SoftwareSerial* serial, byte auxPin, UART_BPS_RATE bpsRate){
 
     this->bpsRate = bpsRate;
 }
-LoRa_E32::LoRa_E32(SoftwareSerial* serial, byte auxPin, byte m0Pin, byte m1Pin, UART_BPS_RATE bpsRate){
-    this->txE32pin = txE32pin;
-    this->rxE32pin = rxE32pin;
+LoRa_AS32::LoRa_AS32(SoftwareSerial* serial, byte auxPin, byte m0Pin, byte m1Pin, UART_BPS_RATE bpsRate){
+    this->txAS32pin = txAS32pin;
+    this->rxAS32pin = rxAS32pin;
 
     this->auxPin = auxPin;
 
@@ -204,7 +204,7 @@ LoRa_E32::LoRa_E32(SoftwareSerial* serial, byte auxPin, byte m0Pin, byte m1Pin, 
 }
 #endif
 
-bool LoRa_E32::begin(){
+bool LoRa_AS32::begin(){
 	if (this->auxPin != -1) {
 		pinMode(this->auxPin, INPUT);
 		DEBUG_PRINTLN("Init AUX pin!");
@@ -227,8 +227,8 @@ bool LoRa_E32::begin(){
         DEBUG_PRINTLN("Begin Hardware Serial");
 
 #ifdef HARDWARE_SERIAL_SELECTABLE_PIN
-        if(this->txE32pin != -1 && this->rxE32pin != -1) {
-			this->serialDef.begin(*this->hs, this->bpsRate, this->serialConfig, this->txE32pin, this->rxE32pin);
+        if(this->txAS32pin != -1 && this->rxAS32pin != -1) {
+			this->serialDef.begin(*this->hs, this->bpsRate, this->serialConfig, this->txAS32pin, this->rxAS32pin);
 		}else{
 			this->serialDef.begin(*this->hs, this->bpsRate, this->serialConfig);
 		}
@@ -247,14 +247,14 @@ bool LoRa_E32::begin(){
 		this->serialDef.begin(*this->ss, this->bpsRate);
 	}	else{
         DEBUG_PRINTLN("Begin Software Serial Pin");
-        SoftwareSerial* mySerial = new SoftwareSerial((int)this->txE32pin, (int)this->rxE32pin); // "RX TX" // @suppress("Abstract class cannot be instantiated")
+        SoftwareSerial* mySerial = new SoftwareSerial((int)this->txAS32pin, (int)this->rxAS32pin); // "RX TX" // @suppress("Abstract class cannot be instantiated")
         this->ss = mySerial;
 
-//		SoftwareSerial mySerial(this->txE32pin, this->rxE32pin);
+//		SoftwareSerial mySerial(this->txAS32pin, this->rxAS32pin);
         DEBUG_PRINT("RX Pin: ");
-        DEBUG_PRINT((int)this->txE32pin);
+        DEBUG_PRINT((int)this->txAS32pin);
         DEBUG_PRINT("TX Pin: ");
-        DEBUG_PRINTLN((int)this->rxE32pin);
+        DEBUG_PRINTLN((int)this->rxAS32pin);
 
 		this->serialDef.begin(*this->ss, this->bpsRate);
 #endif
@@ -272,7 +272,7 @@ a timeout is provided to avoid an infinite loop
 
 */
 
-Status LoRa_E32::waitCompleteResponse(unsigned long timeout, unsigned int waitNoAux) {
+Status LoRa_AS32::waitCompleteResponse(unsigned long timeout, unsigned int waitNoAux) {
 
 	Status result = SUCCESS;
 
@@ -288,7 +288,7 @@ Status LoRa_E32::waitCompleteResponse(unsigned long timeout, unsigned int waitNo
 	if (this->auxPin != -1) {
 		while (digitalRead(this->auxPin) == LOW) {
 			if ((millis() - t) > timeout){
-				result = ERR_E32_TIMEOUT;
+				result = ERR_AS32_TIMEOUT;
 				DEBUG_PRINTLN("Timeout error!");
 				return result;
 			}
@@ -317,7 +317,7 @@ just poll internal time until timeout is reached
 */
 
 
-void LoRa_E32::managedDelay(unsigned long timeout) {
+void LoRa_AS32::managedDelay(unsigned long timeout) {
 
 	unsigned long t = millis();
 
@@ -336,7 +336,7 @@ Method to indicate availability
 
 */
 
-int LoRa_E32::available(unsigned long timeout) {
+int LoRa_AS32::available(unsigned long timeout) {
 //	unsigned long t = millis();
 //
 //	// make darn sure millis() is not about to reach max data type limit and start over
@@ -368,12 +368,12 @@ Method to indicate availability
 
 */
 
-void LoRa_E32::flush() {
+void LoRa_AS32::flush() {
 	this->serialDef.stream->flush();
 }
 
 
-void LoRa_E32::cleanUARTBuffer()
+void LoRa_AS32::cleanUARTBuffer()
 {
 //  bool IsNull = true;
 
@@ -399,9 +399,9 @@ types each handle ints floats differently
 
 */
 
-Status LoRa_E32::sendStruct(void *structureManaged, uint16_t size_) {
+Status LoRa_AS32::sendStruct(void *structureManaged, uint16_t size_) {
 		if (size_ > MAX_SIZE_TX_PACKET + 2){
-			return ERR_E32_PACKET_TOO_BIG;
+			return ERR_AS32_PACKET_TOO_BIG;
 		}
 
 		Status result = SUCCESS;
@@ -413,9 +413,9 @@ Status LoRa_E32::sendStruct(void *structureManaged, uint16_t size_) {
 			DEBUG_PRINT(F(" size:"))
 			DEBUG_PRINT(size_);
 			if (len==0){
-				result = ERR_E32_NO_RESPONSE_FROM_DEVICE;
+				result = ERR_AS32_NO_RESPONSE_FROM_DEVICE;
 			}else{
-				result = ERR_E32_DATA_SIZE_NOT_MATCH;
+				result = ERR_AS32_DATA_SIZE_NOT_MATCH;
 			}
 		}
 		if (result != SUCCESS) return result;
@@ -445,7 +445,7 @@ types each handle ints floats differently
 */
 
 
-Status LoRa_E32::receiveStruct(void *structureManaged, uint16_t size_) {
+Status LoRa_AS32::receiveStruct(void *structureManaged, uint16_t size_) {
 	Status result = SUCCESS;
 
 	uint8_t len = this->serialDef.stream->readBytes((uint8_t *) structureManaged, size_);
@@ -457,9 +457,9 @@ Status LoRa_E32::receiveStruct(void *structureManaged, uint16_t size_) {
 
 	if (len!=size_){
 		if (len==0){
-			result = ERR_E32_NO_RESPONSE_FROM_DEVICE;
+			result = ERR_AS32_NO_RESPONSE_FROM_DEVICE;
 		}else{
-			result = ERR_E32_DATA_SIZE_NOT_MATCH;
+			result = ERR_AS32_DATA_SIZE_NOT_MATCH;
 		}
 	}
 	if (result != SUCCESS) return result;
@@ -476,7 +476,7 @@ method to set the mode (program, normal, etc.)
 
 */
 
-Status LoRa_E32::setMode(MODE_TYPE mode) {
+Status LoRa_AS32::setMode(MODE_TYPE mode) {
 
 	// data sheet claims module needs some extra time after mode setting (2ms)
 	// most of my projects uses 10 ms, but 40ms is safer
@@ -511,7 +511,7 @@ Status LoRa_E32::setMode(MODE_TYPE mode) {
 			DEBUG_PRINTLN("MODE PROGRAM/SLEEP!");
 			break;
 		  default:
-			return ERR_E32_INVALID_PARAM;
+			return ERR_AS32_INVALID_PARAM;
 		}
 	}
 	// data sheet says 2ms later control is returned, let's give just a bit more time
@@ -528,18 +528,18 @@ Status LoRa_E32::setMode(MODE_TYPE mode) {
 	return res;
 }
 
-MODE_TYPE LoRa_E32::getMode(){
+MODE_TYPE LoRa_AS32::getMode(){
 	return this->mode;
 }
 
-void LoRa_E32::writeProgramCommand(PROGRAM_COMMAND cmd){
+void LoRa_AS32::writeProgramCommand(PROGRAM_COMMAND cmd){
 	  uint8_t CMD[3] = {cmd, cmd, cmd};
 	  uint8_t size = this->serialDef.stream->write(CMD, 3);
 	  DEBUG_PRINTLN(size);
 	  this->managedDelay(50);  //need ti check
 }
 
-ResponseStructContainer LoRa_E32::getConfiguration(){
+ResponseStructContainer LoRa_AS32::getConfiguration(){
 	ResponseStructContainer rc;
 
 	rc.status.code = checkUARTConfiguration(MODE_3_PROGRAM);
@@ -555,7 +555,7 @@ ResponseStructContainer LoRa_E32::getConfiguration(){
 	rc.data = malloc(sizeof(Configuration));
 	rc.status.code = this->receiveStruct((uint8_t *)rc.data, sizeof(Configuration));
 
-#ifdef LoRa_E32_DEBUG
+#ifdef LoRa_AS32_DEBUG
 	 this->printParameters((Configuration *)rc.data);
 #endif
 
@@ -574,21 +574,21 @@ ResponseStructContainer LoRa_E32::getConfiguration(){
 //	this->printParameters(*configuration);
 
 	if (0xC0 != ((Configuration *)rc.data)->HEAD && 0xC2 != ((Configuration *)rc.data)->HEAD){
-		rc.status.code = ERR_E32_HEAD_NOT_RECOGNIZED;
+		rc.status.code = ERR_AS32_HEAD_NOT_RECOGNIZED;
 	}
 
 //	rc.data = configuration;
 	return rc;
 }
 
-RESPONSE_STATUS LoRa_E32::checkUARTConfiguration(MODE_TYPE mode){
+RESPONSE_STATUS LoRa_AS32::checkUARTConfiguration(MODE_TYPE mode){
 	if (mode==MODE_3_PROGRAM && this->bpsRate!=UART_BPS_RATE_9600){
-		return ERR_E32_WRONG_UART_CONFIG;
+		return ERR_AS32_WRONG_UART_CONFIG;
 	}
 	return SUCCESS;
 }
 
-ResponseStatus LoRa_E32::setConfiguration(Configuration configuration, PROGRAM_COMMAND saveType){
+ResponseStatus LoRa_AS32::setConfiguration(Configuration configuration, PROGRAM_COMMAND saveType){
 	ResponseStatus rc;
 
 	rc.code = checkUARTConfiguration(MODE_3_PROGRAM);
@@ -619,13 +619,13 @@ ResponseStatus LoRa_E32::setConfiguration(Configuration configuration, PROGRAM_C
 //	this->printParameters(*configuration);
 
 	if (0xC0 != configuration.HEAD && 0xC2 != configuration.HEAD){
-		rc.code = ERR_E32_HEAD_NOT_RECOGNIZED;
+		rc.code = ERR_AS32_HEAD_NOT_RECOGNIZED;
 	}
 
 	return rc;
 }
 
-ResponseStructContainer LoRa_E32::getModuleInformation(){
+ResponseStructContainer LoRa_AS32::getModuleInformation(){
 	ResponseStructContainer rc;
 
 	rc.status.code = checkUARTConfiguration(MODE_3_PROGRAM);
@@ -651,7 +651,7 @@ ResponseStructContainer LoRa_E32::getModuleInformation(){
 //	this->printParameters(*configuration);
 
 	if (0xC3 != moduleInformation->HEAD){
-		rc.status.code = ERR_E32_HEAD_NOT_RECOGNIZED;
+		rc.status.code = ERR_AS32_HEAD_NOT_RECOGNIZED;
 	}
 
 	DEBUG_PRINTLN("----------------------------------------");
@@ -668,7 +668,7 @@ ResponseStructContainer LoRa_E32::getModuleInformation(){
 }
 
 
-ResponseStatus LoRa_E32::resetModule(){
+ResponseStatus LoRa_AS32::resetModule(){
 	ResponseStatus status;
 
 	status.code = checkUARTConfiguration(MODE_3_PROGRAM);
@@ -694,7 +694,7 @@ ResponseStatus LoRa_E32::resetModule(){
 	return status;
 }
 
-ResponseContainer LoRa_E32::receiveMessage(){
+ResponseContainer LoRa_AS32::receiveMessage(){
 	ResponseContainer rc;
 	rc.status.code = SUCCESS;
 	rc.data = this->serialDef.stream->readString();
@@ -707,7 +707,7 @@ ResponseContainer LoRa_E32::receiveMessage(){
 
 	return rc;
 }
-ResponseContainer LoRa_E32::receiveMessageUntil(char delimiter){
+ResponseContainer LoRa_AS32::receiveMessageUntil(char delimiter){
 	ResponseContainer rc;
 	rc.status.code = SUCCESS;
 	rc.data = this->serialDef.stream->readStringUntil(delimiter);
@@ -720,7 +720,7 @@ ResponseContainer LoRa_E32::receiveMessageUntil(char delimiter){
 
 	return rc;
 }
-ResponseStructContainer LoRa_E32::receiveMessage(const uint8_t size){
+ResponseStructContainer LoRa_AS32::receiveMessage(const uint8_t size){
 	ResponseStructContainer rc;
 
 	rc.data = malloc(size);
@@ -733,14 +733,14 @@ ResponseStructContainer LoRa_E32::receiveMessage(const uint8_t size){
 	return rc;
 }
 
-ResponseStatus LoRa_E32::sendMessage(const void *message, const uint8_t size){
+ResponseStatus LoRa_AS32::sendMessage(const void *message, const uint8_t size){
 	ResponseStatus status;
 	status.code = this->sendStruct((uint8_t *)message, size);
 	if (status.code!=SUCCESS) return status;
 
 	return status;
 }
-ResponseStatus LoRa_E32::sendMessage(const String message){
+ResponseStatus LoRa_AS32::sendMessage(const String message){
 	DEBUG_PRINT(F("Send message: "));
 	DEBUG_PRINT(message);
 	byte size = message.length(); // sizeof(message.c_str())+1;
@@ -756,7 +756,7 @@ ResponseStatus LoRa_E32::sendMessage(const String message){
 	return status;
 }
 
-ResponseStatus LoRa_E32::sendFixedMessage(byte ADDH, byte ADDL, byte CHAN, const String message){
+ResponseStatus LoRa_AS32::sendFixedMessage(byte ADDH, byte ADDL, byte CHAN, const String message){
 //	DEBUG_PRINT("String/size: ");
 //	DEBUG_PRINT(message);
 //	DEBUG_PRINT("/");
@@ -791,7 +791,7 @@ ResponseStatus LoRa_E32::sendFixedMessage(byte ADDH, byte ADDL, byte CHAN, const
 	memcpy(messageFixed,message.c_str(),size);
 	return this->sendFixedMessage(ADDH, ADDL, CHAN, (uint8_t *)messageFixed, size);
 }
-ResponseStatus LoRa_E32::sendBroadcastFixedMessage(byte CHAN, const String message){
+ResponseStatus LoRa_AS32::sendBroadcastFixedMessage(byte CHAN, const String message){
 	return this->sendFixedMessage(0xFF, 0xFF, CHAN, message);
 }
 
@@ -808,7 +808,7 @@ FixedStransmission *init_stack(int m){
     return st;
 }
 
-ResponseStatus LoRa_E32::sendFixedMessage( byte ADDH,byte ADDL, byte CHAN, const void *message, const uint8_t size){
+ResponseStatus LoRa_AS32::sendFixedMessage( byte ADDH,byte ADDL, byte CHAN, const void *message, const uint8_t size){
 //	#pragma pack(push, 1)
 //	struct FixedStransmission {
 //		byte ADDH = 0;
@@ -846,20 +846,20 @@ ResponseStatus LoRa_E32::sendFixedMessage( byte ADDH,byte ADDL, byte CHAN, const
 
 	return status;
 }
-ResponseStatus LoRa_E32::sendBroadcastFixedMessage(byte CHAN, const void *message, const uint8_t size){
+ResponseStatus LoRa_AS32::sendBroadcastFixedMessage(byte CHAN, const void *message, const uint8_t size){
 	return this->sendFixedMessage(0xFF, 0xFF, CHAN, message, size);
 }
 
-ResponseContainer LoRa_E32::receiveInitialMessage(uint8_t size){
+ResponseContainer LoRa_AS32::receiveInitialMessage(uint8_t size){
 	ResponseContainer rc;
 	rc.status.code = SUCCESS;
 	char buff[size];
 	uint8_t len = this->serialDef.stream->readBytes(buff, size);
 	if (len!=size) {
 		if (len==0){
-			rc.status.code = ERR_E32_NO_RESPONSE_FROM_DEVICE;
+			rc.status.code = ERR_AS32_NO_RESPONSE_FROM_DEVICE;
 		}else{
-			rc.status.code = ERR_E32_DATA_SIZE_NOT_MATCH;
+			rc.status.code = ERR_AS32_DATA_SIZE_NOT_MATCH;
 		}
 		return rc;
 	}
@@ -871,7 +871,7 @@ ResponseContainer LoRa_E32::receiveInitialMessage(uint8_t size){
 
 #define KeeLoq_NLF		0x3A5C742E
 
-unsigned long LoRa_E32::encrypt(unsigned long data)
+unsigned long LoRa_AS32::encrypt(unsigned long data)
 {
   unsigned long x = data;
   unsigned long r;
@@ -892,7 +892,7 @@ unsigned long LoRa_E32::encrypt(unsigned long data)
   return x;
 }
 
-unsigned long LoRa_E32::decrypt(unsigned long data)
+unsigned long LoRa_AS32::decrypt(unsigned long data)
 {
   unsigned long x = data;
   unsigned long r;
@@ -912,8 +912,8 @@ unsigned long LoRa_E32::decrypt(unsigned long data)
   }
   return x;
  }
-#ifdef LoRa_E32_DEBUG
-void LoRa_E32::printParameters(struct Configuration *configuration) {
+#ifdef LoRa_AS32_DEBUG
+void LoRa_AS32::printParameters(struct Configuration *configuration) {
 	DEBUG_PRINTLN("----------------------------------------");
 
 	DEBUG_PRINT(F("HEAD : "));  DEBUG_PRINT(configuration->HEAD, BIN);DEBUG_PRINT(" ");DEBUG_PRINT(configuration->HEAD, DEC);DEBUG_PRINT(" ");DEBUG_PRINTLN(configuration->HEAD, HEX);

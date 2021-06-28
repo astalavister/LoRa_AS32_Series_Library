@@ -1,11 +1,11 @@
 ﻿<div>
 <a href="https://www.mischianti.org/forums/forum/mischiantis-libraries/ebyte-lora-e32-uart-devices/"><img
-  src="https://github.com/xreef/LoRa_E32_Series_Library/raw/master/resources/buttonSupportForumEnglish.png" alt="Support forum EByte e32 English"
+  src="https://github.com/xreef/LoRa_AS32_Series_Library/raw/master/resources/buttonSupportForumEnglish.png" alt="Support forum EByte e32 English"
    align="right"></a>
 </div>
 <div>
 <a href="https://www.mischianti.org/it/forums/forum/le-librerie-di-mischianti/ebyte-e32-dispositivi-lora-uart/"><img
-  src="https://github.com/xreef/LoRa_E32_Series_Library/raw/master/resources/buttonSupportForumItaliano.png" alt="Forum supporto EByte e32 italiano"
+  src="https://github.com/xreef/LoRa_AS32_Series_Library/raw/master/resources/buttonSupportForumItaliano.png" alt="Forum supporto EByte e32 italiano"
   align="right"></a>
 </div>
 
@@ -15,35 +15,35 @@
 
 # A complete tutorial on my site www.mischianti.org
 
-1.  [LoRa E32 device for Arduino, esp32 or esp8266: settings and basic usage](https://www.mischianti.org/2019/10/15/lora-e32-device-for-arduino-esp32-or-esp8266-specs-and-basic-usage-part-1/)
-2.  [LoRa E32 device for Arduino, esp32 or esp8266: library](https://www.mischianti.org/2019/10/21/lora-e32-device-for-arduino-esp32-or-esp8266-library-part-2/)
-3.  [LoRa E32 device for Arduino, esp32 or esp8266: configuration](https://www.mischianti.org/2019/10/29/lora-e32-device-for-arduino-esp32-or-esp8266-configuration-part-3/)
-4.  [LoRa E32 device for Arduino, esp32 or esp8266: fixed transmission](https://www.mischianti.org/2019/11/10/lora-e32-device-for-arduino-esp32-or-esp8266-fixed-transmission-part-4/)
-5.  [LoRa E32 device for Arduino, esp32 or esp8266: power saving and sending structured data](https://www.mischianti.org/2019/12/03/lora-e32-device-for-arduino-esp32-or-esp8266-power-saving-and-sending-structured-data-part-5/)
-6.  [LoRa E32 device for Arduino, esp32 or esp8266: WOR (wake on radio) the microcontroller and Arduino shield](https://www.mischianti.org/2019/12/28/lora-e32-device-for-arduino-esp32-or-esp8266-wor-wake-on-radio-the-microcontroller-also-and-new-arduino-shield-part-6/)
-7.  [LoRa E32 device for Arduino, esp32 or esp8266: WOR (wake on radio) microcontroller and new WeMos D1 mini shield](https://www.mischianti.org/2020/01/17/lora-e32-device-for-arduino-esp32-or-esp8266-wor-wake-on-radio-microcontroller-and-new-wemos-d1-mini-shield-part-7/)
+1.  [LoRa AS32 device for Arduino, esp32 or esp8266: settings and basic usage](https://www.mischianti.org/2019/10/15/lora-e32-device-for-arduino-esp32-or-esp8266-specs-and-basic-usage-part-1/)
+2.  [LoRa AS32 device for Arduino, esp32 or esp8266: library](https://www.mischianti.org/2019/10/21/lora-e32-device-for-arduino-esp32-or-esp8266-library-part-2/)
+3.  [LoRa AS32 device for Arduino, esp32 or esp8266: configuration](https://www.mischianti.org/2019/10/29/lora-e32-device-for-arduino-esp32-or-esp8266-configuration-part-3/)
+4.  [LoRa AS32 device for Arduino, esp32 or esp8266: fixed transmission](https://www.mischianti.org/2019/11/10/lora-e32-device-for-arduino-esp32-or-esp8266-fixed-transmission-part-4/)
+5.  [LoRa AS32 device for Arduino, esp32 or esp8266: power saving and sending structured data](https://www.mischianti.org/2019/12/03/lora-e32-device-for-arduino-esp32-or-esp8266-power-saving-and-sending-structured-data-part-5/)
+6.  [LoRa AS32 device for Arduino, esp32 or esp8266: WOR (wake on radio) the microcontroller and Arduino shield](https://www.mischianti.org/2019/12/28/lora-e32-device-for-arduino-esp32-or-esp8266-wor-wake-on-radio-the-microcontroller-also-and-new-arduino-shield-part-6/)
+7.  [LoRa AS32 device for Arduino, esp32 or esp8266: WOR (wake on radio) microcontroller and new WeMos D1 mini shield](https://www.mischianti.org/2020/01/17/lora-e32-device-for-arduino-esp32-or-esp8266-wor-wake-on-radio-microcontroller-and-new-wemos-d1-mini-shield-part-7/)
 
 
 # An Arduino UNO shield to simplify the use
 Arduino UNO shield
 
-<img width="450px" src="https://www.mischianti.org/wp-content/uploads/2019/12/ArduinoShieldMountedE32LoRa_min.jpg" alt="" class="wp-image-2155"/>
+<img width="450px" src="https://www.mischianti.org/wp-content/uploads/2019/12/ArduinoShieldMountedAS32LoRa_min.jpg" alt="" class="wp-image-2155"/>
 
-You can order the PCB  [here](https://www.pcbway.com/project/shareproject/LoRa_E32_Series_device_Arduino_shield.html?from=mischianti05) 
+You can order the PCB  [here](https://www.pcbway.com/project/shareproject/LoRa_AS32_Series_device_Arduino_shield.html?from=mischianti05) 
 
 Instruction and assembly video on 6 part of the guide
 
 # An WeMos D1 shield to simplify the use
 WeMos D1 shield
-<img width="450px" src="https://www.mischianti.org/wp-content/uploads/2020/01/WeMosD1ShieldMountedE32LoRa_min.jpg" alt="" class="wp-image-2155"/>
+<img width="450px" src="https://www.mischianti.org/wp-content/uploads/2020/01/WeMosD1ShieldMountedAS32LoRa_min.jpg" alt="" class="wp-image-2155"/>
 
-You can order the PCB  [here](https://www.pcbway.com/project/shareproject/LoRa_E32_Series_device_WeMos_D1_mini_shield_RF_8km_range.html?from=mischianti05) 
+You can order the PCB  [here](https://www.pcbway.com/project/shareproject/LoRa_AS32_Series_device_WeMos_D1_mini_shield_RF_8km_range.html?from=mischianti05) 
 
 # An ESP32 shield to simplify the use
 ESP32 shield
-<img width="450px" src="https://www.mischianti.org/wp-content/uploads/2021/04/esp32-DOIT-DEV-KIT-v1-EByte-LoRa-E32-shield-main.jpg" alt="" class="wp-image-2155"/>
+<img width="450px" src="https://www.mischianti.org/wp-content/uploads/2021/04/esp32-DOIT-DEV-KIT-v1-EByte-LoRa-AS32-shield-main.jpg" alt="" class="wp-image-2155"/>
 
-You can order the PCB  [here](https://www.pcbway.com/project/shareproject/LoRa_ESP32_DEV_KIT_v1_shield_for_EByte_E32_E22__RF_8km_12km_range.html?from=mischianti05) 
+You can order the PCB  [here](https://www.pcbway.com/project/shareproject/LoRa_ESP32_DEV_KIT_v1_shield_for_EByte_AS32_E22__RF_8km_12km_range.html?from=mischianti05) 
 
 
 
@@ -51,13 +51,13 @@ Instruction and assembly video on 6 part of the guide
 
 
 
-# LoRa E32 (EBYTE LoRa SX1278/SX1276) series Library for Arduino, esp8266 and esp32-
+# LoRa AS32 (EBYTE LoRa SX1278/SX1276) series Library for Arduino, esp8266 and esp32-
 
-I create a library to manage EBYTE E32 series of LoRa device, very powerfull, simple and cheap device.
+I create a library to manage EBYTE AS32 series of LoRa device, very powerfull, simple and cheap device.
 
-![](https://www.mischianti.org/wp-content/uploads/2019/09/LoRa_E32-TTL-100.jpg)
+![](https://www.mischianti.org/wp-content/uploads/2019/09/LoRa_AS32-TTL-100.jpg)
 
-LoRa E32-TTL-100
+LoRa AS32-TTL-100
 
 You can find here [AliExpress (3Km device)](http://s.click.aliexpress.com/e/eOHotRkU) [AliExpress (8Km device)](http://s.click.aliexpress.com/e/qRuqOQQM)
 
@@ -73,11 +73,11 @@ You can find my library here.
 
 To download.
 
-Click the DOWNLOADS button in the top right corner, rename the uncompressed folder LoRa_E32.
+Click the DOWNLOADS button in the top right corner, rename the uncompressed folder LoRa_AS32.
 
-Check that the LoRa_E32 folder contains LoRa_E32.cpp and LoRa_E32.h.
+Check that the LoRa_AS32 folder contains LoRa_AS32.cpp and LoRa_AS32.h.
 
-Place the LoRa_E32 library folder your /libraries/ folder.
+Place the LoRa_AS32 library folder your /libraries/ folder.
 
 You may need to create the libraries subfolder if its your first library.
 
@@ -87,7 +87,7 @@ Restart the IDE.
 
 ![](https://www.mischianti.org/wp-content/uploads/2019/09/sx1278-sx1276-wireless-lora-uart-module-serial-3000m-arduino-433-rf-robotedu-1705-13-robotedu@101.jpg)
 
-E32 TTL 100
+AS32 TTL 100
 
 You can buy here [AliExpress](http://s.click.aliexpress.com/e/eOHotRkU)
 
@@ -120,7 +120,7 @@ When transmitting data can be used to wake up external MCU and return HIGH on da
 
 ![](https://www.mischianti.org/wp-content/uploads/2019/10/e32auxPinOnTransmission-1024x269.jpg)
 
-LoRa E32 AUX Pin on transmission
+LoRa AS32 AUX Pin on transmission
 
 When receiving AUX going LOW and return HIGH when buffer is empty.
 
@@ -136,9 +136,9 @@ LoRa e32 AUX pin on self-check
 
 esp8266 connection schema is more simple because It work at the same voltage of logical communications (3.3v).
 
-![](https://www.mischianti.org/wp-content/uploads/2019/10/LoRa_E32-TTL-100_WemosD1_VD_PU_FullyConnected_bb-1024x746.jpg)
+![](https://www.mischianti.org/wp-content/uploads/2019/10/LoRa_AS32-TTL-100_WemosD1_VD_PU_FullyConnected_bb-1024x746.jpg)
 
-LoRa E32 TTL 100 Wemos D1 fully connected
+LoRa AS32 TTL 100 Wemos D1 fully connected
 
 It’s important to add pull-up resistor (4,7Kohm) to get good stability.
 
@@ -154,9 +154,9 @@ Arduino working voltage is 5v, so we need to add a voltage divider on RX pin M0 
 
 You can use a 2Kohm resistor to GND and 1Kohm from signal than put together on RX.
 
-![](https://www.mischianti.org/wp-content/uploads/2019/10/LoRa_E32-TTL-100_Arduino_VD_PU_FullyConnected_bb-1024x692.jpg)
+![](https://www.mischianti.org/wp-content/uploads/2019/10/LoRa_AS32-TTL-100_Arduino_VD_PU_FullyConnected_bb-1024x692.jpg)
 
-LoRa E32 TTL 100 Arduino fully connected
+LoRa AS32 TTL 100 Arduino fully connected
 
 |M0|7 (Voltage divider)|
 |---|---|
@@ -172,11 +172,11 @@ LoRa E32 TTL 100 Arduino fully connected
 I made a set of quite numerous constructors, because we can have more options and situations to manage.
 
 ```cpp
-LoRa_E32(byte rxPin, byte txPin, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
+LoRa_AS32(byte rxPin, byte txPin, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
 
-LoRa_E32(byte rxPin, byte txPin, byte auxPin, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
+LoRa_AS32(byte rxPin, byte txPin, byte auxPin, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
 
-LoRa_E32(byte rxPin, byte txPin, byte auxPin, byte m0Pin, byte m1Pin, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
+LoRa_AS32(byte rxPin, byte txPin, byte auxPin, byte m0Pin, byte m1Pin, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
 ```
 
 First set of constructor are create to delegate the manage of Serial and other pins to the library.
@@ -190,35 +190,35 @@ First set of constructor are create to delegate the manage of Serial and other p
 A simple example is
 
 ```cpp
-#include "LoRa_E32.h"
-LoRa_E32 e32ttl100(2, 3); // RX, TX
-// LoRa_E32 e32ttl100(2, 3, 5, 6, 7); // RX, TX
+#include "LoRa_AS32.h"
+LoRa_AS32 e32ttl100(2, 3); // RX, TX
+// LoRa_AS32 e32ttl100(2, 3, 5, 6, 7); // RX, TX
 ```
 
 We can use directly a SoftwareSerial with another constructor
 
 ```cpp
-LoRa_E32(HardwareSerial* serial, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
-LoRa_E32(HardwareSerial* serial, byte auxPin, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
-LoRa_E32(HardwareSerial* serial, byte auxPin, byte m0Pin, byte m1Pin, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
+LoRa_AS32(HardwareSerial* serial, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
+LoRa_AS32(HardwareSerial* serial, byte auxPin, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
+LoRa_AS32(HardwareSerial* serial, byte auxPin, byte m0Pin, byte m1Pin, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
 ```
 
 The example upper with this constructor can be do like so.
 
 ```cpp
 #include <SoftwareSerial.h>
-#include "LoRa_E32.h"
+#include "LoRa_AS32.h"
 SoftwareSerial mySerial(2, 3); // RX, TX
-LoRa_E32 e32ttl100(mySerial);
-// LoRa_E32 e32ttl100(&amp;mySerial, 5, 7, 6);
+LoRa_AS32 e32ttl100(mySerial);
+// LoRa_AS32 e32ttl100(&amp;mySerial, 5, 7, 6);
 ```
 
 The last set of constructor is to permit to use an HardwareSerial instead of SoftwareSerial.
 
 ```cpp
-LoRa_E32(SoftwareSerial* serial, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
-LoRa_E32(SoftwareSerial* serial, byte auxPin, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
-LoRa_E32(SoftwareSerial* serial, byte auxPin, byte m0Pin, byte m1Pin, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
+LoRa_AS32(SoftwareSerial* serial, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
+LoRa_AS32(SoftwareSerial* serial, byte auxPin, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
+LoRa_AS32(SoftwareSerial* serial, byte auxPin, byte m0Pin, byte m1Pin, UART_BPS_RATE bpsRate = UART_BPS_RATE_9600);
 ```
 
 ## Begin
@@ -265,16 +265,16 @@ The code are
 
 ```cpp
 SUCCESS = 1,
-ERR_E32_UNKNOWN,
-ERR_E32_NOT_SUPPORT,
-ERR_E32_NOT_IMPLEMENT,
-ERR_E32_NOT_INITIAL,
-ERR_E32_INVALID_PARAM,
-ERR_E32_DATA_SIZE_NOT_MATCH,
-ERR_E32_BUF_TOO_SMALL,
-ERR_E32_TIMEOUT,
-ERR_E32_HARDWARE,
-ERR_E32_HEAD_NOT_RECOGNIZED
+ERR_AS32_UNKNOWN,
+ERR_AS32_NOT_SUPPORT,
+ERR_AS32_NOT_IMPLEMENT,
+ERR_AS32_NOT_INITIAL,
+ERR_AS32_INVALID_PARAM,
+ERR_AS32_DATA_SIZE_NOT_MATCH,
+ERR_AS32_BUF_TOO_SMALL,
+ERR_AS32_TIMEOUT,
+ERR_AS32_HARDWARE,
+ERR_AS32_HEAD_NOT_RECOGNIZED
 ```
 
 ##### ResponseContainer
@@ -323,7 +323,7 @@ Serial.println(c.status.code);
 Serial.println(configuration.SPED.getUARTBaudRate());
 ```
 
-![Get configuration](https://www.mischianti.org/wp-content/uploads/2019/12/E32_request_configuration_logic_analyzer-1024x319.jpg)
+![Get configuration](https://www.mischianti.org/wp-content/uploads/2019/12/AS32_request_configuration_logic_analyzer-1024x319.jpg)
 
 Structure of configuration have all data of settings, and I add a series of function to get all description of single data.
 
@@ -485,16 +485,16 @@ Transmission power
 You can change this set of constant by apply a define like so:
 
 ```cpp
-#define E32_TTL_100 // default value without set
+#define AS32_TTL_100 // default value without set
 ```
 
-Applicable for  **E32-TTL-100, E32-TTL-100S1, E32-T100S2.**  
+Applicable for  **AS32-TTL-100, AS32-TTL-100S1, AS32-T100S2.**  
 The external power must make sure the ability of current output more than 250mA and ensure the power supply ripple within 100mV.  
 Low power transmission is not recommended due to its low power supply  
 efficiency.
 
 ```cpp
-#define E32_TTL_100 // default value without set
+#define AS32_TTL_100 // default value without set
 ```
 
 |1|0|Transmission power (approximation)|Constant value|
@@ -504,12 +504,12 @@ efficiency.
 |1|0|14dBm|POWER_14|
 |1|1|10dBm|POWER_10|
 
-Applicable for E32-TTL-500。  
+Applicable for AS32-TTL-500。  
 The external power must make sure the ability of current output more than 700mA and ensure the power supply ripple within 100mV.  
 Low power transmission is not recommended due to its low power supply efficiency.
 
 ```cpp
-#define E32_TTL_500
+#define AS32_TTL_500
 ```
 
 |1|0|Transmission power (approximation)|Constant value|
@@ -519,13 +519,13 @@ Low power transmission is not recommended due to its low power supply efficiency
 |1|0|21dBm|POWER_21|
 |1|1|18dBm|POWER_18|
 
-Applicable for E32-TTL-1W, E32 (433T30S), E32 (868T30S), E32 (915T30S)  
+Applicable for AS32-TTL-1W, AS32 (433T30S), AS32 (868T30S), AS32 (915T30S)  
 The external power must make sure the ability of current output more than 1A and ensure the power supply ripple within 100mV.  
 Low power transmission is not recommended due to its low power supply  
 efficiency.
 
 ```cpp
-#define E32_TTL_1W
+#define AS32_TTL_1W
 ```
 
 |1|0|Transmission power (approximation)|Constant value|
@@ -562,9 +562,9 @@ It’s simply return how many bytes you have in the current stream.
 
 Normal/Transparent transmission mode is used to send messages to all device with same address and channel.
 
-![](https://www.mischianti.org/wp-content/uploads/2019/10/LoRa_E32_transmittingScenarios.jpg)
+![](https://www.mischianti.org/wp-content/uploads/2019/10/LoRa_AS32_transmittingScenarios.jpg)
 
-LoRa E32 transmitting scenarios, lines are channels
+LoRa AS32 transmitting scenarios, lines are channels
 
 There are a lot of method to send/receive message, we are going to explain in detail:
 
@@ -713,9 +713,9 @@ ResponseStatus rs = e32ttl.sendFixedMessage(0, 0, 0x17, &amp;messaggione, sizeof
 
 Fixed transmission have more scenarios
 
-![](https://www.mischianti.org/wp-content/uploads/2019/10/LoRa_E32_transmittingScenarios.jpg)
+![](https://www.mischianti.org/wp-content/uploads/2019/10/LoRa_AS32_transmittingScenarios.jpg)
 
-LoRa E32 transmitting scenarios, lines are channels
+LoRa AS32 transmitting scenarios, lines are channels
 
 If you send to a specific device (second scenarios Fixed transmission) you must add ADDL, ADDH and CHAN to identify It directly.
 

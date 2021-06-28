@@ -1,12 +1,12 @@
 ###########################################
-# Syntax Coloring Map For LoRa_E32_Series-library
+# Syntax Coloring Map For LoRa_AS32_Series-library
 ###########################################
 
 ###########################################
 # Datatypes (KEYWORD1)
 ###########################################
 
-LoRa_E32	KEYWORD1
+LoRa_AS32	KEYWORD1
 
 ###########################################
 # Methods and Functions (KEYWORD2)
